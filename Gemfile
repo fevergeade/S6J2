@@ -60,3 +60,26 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+
+##########################################
+#ajout des gem de THP
+gem 'rspec'
+gem 'dotenv'
+gem 'pry'
+gem 'rubocop', '~> 0.57.2'
+#ajout de la gem faker pour les cas de test
+gem 'faker'
+#ajout de la gem table_print pour l'affichage
+gem 'table_print'
+#gestion des password
+gem 'bcrypt'
+#gestion des erreurs
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+#gestion des testes emails
+gem "letter_opener", :group => :development
+#gestion des email
+gem 'dotenv-rails'
