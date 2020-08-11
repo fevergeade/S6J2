@@ -44,6 +44,7 @@ Things you may want to cover:
 	gem "letter_opener", :group => :development
 	#gestion des email
 	gem 'dotenv-rails'
+	gem 'devise'
 =>bundle install
 
 
@@ -51,6 +52,7 @@ Things you may want to cover:
 rails g scaffold User first_name:string last_name:string description:text email:string encrypted_password:string encrypted_token:string
 rails g scaffold Event start_date:datetime duration:integer title:string description:text price:integer location:string
 
-=>rails g model Attendance stripe_customer_id:string
+rails g model Attendance stripe_customer_id:string
 
 
+rails g mailer UserMailer

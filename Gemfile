@@ -83,3 +83,5 @@ end
 gem "letter_opener", :group => :development
 #gestion des email
 gem 'dotenv-rails'
+#gestion des logins 
+gem 'devise'
