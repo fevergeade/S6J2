@@ -14,19 +14,22 @@ Attendance.destroy_all
 puts "creation du 1er user"
 User.create(
   email: "fevergeade@yopmail.com",
-  encrypted_password: "123456",
+  password: "123456",
   description: Faker::Hacker.say_something_smart,
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name
 )
+
 puts "creation du 2eme user"
 User.create(
   email: "fevergeade.admin@yopmail.com",
-  encrypted_password: "123456",
+  password: "123456",
   description: Faker::Hacker.say_something_smart,
   first_name: Faker::Name.first_name,
   last_name: Faker::Name.last_name
 )
+tp User.all
+
 puts "creation du 1er Event"
 Event.create(
   start_date: "2020-09-01",
@@ -37,6 +40,50 @@ Event.create(
   location: "Paris",
   admin_id: User.last.id
 )
+
+puts "creation du 2eme Event"
+Event.create(
+  start_date: "2020-09-02",
+  duration: 30,
+  title: "Génération FREXIT !!!!!!",
+  description: "lancement du parti de Génération FREXIT, afin de quitter cette union européen néo-libérale",
+  price: 50,
+  location: "Paris",
+  admin_id: User.last.id
+)
+
+puts "creation du 3eme Event"
+Event.create(
+  start_date: "2020-09-03",
+  duration: 30,
+  title: "Génération FREXIT !!!!!!",
+  description: "lancement du parti de Génération FREXIT, afin de quitter cette union européen néo-libérale",
+  price: 50,
+  location: "Paris",
+  admin_id: User.last.id
+)
+
+puts "creation du 4eme Event"
+Event.create(
+  start_date: "2020-09-04",
+  duration: 30,
+  title: "Génération FREXIT !!!!!!",
+  description: "lancement du parti de Génération FREXIT, afin de quitter cette union européen néo-libérale",
+  price: 50,
+  location: "Paris",
+  admin_id: User.last.id
+)
+
+Event.create(
+  start_date: "2020-09-05",
+  duration: 30,
+  title: "Génération FREXIT !!!!!!",
+  description: "lancement du parti de Génération FREXIT, afin de quitter cette union européen néo-libérale",
+  price: 50,
+  location: "Paris",
+  admin_id: User.last.id
+)
+
 puts "creation lien event participant"
 Attendance.create(
   stripe_customer_id: "123456",

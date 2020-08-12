@@ -10,6 +10,11 @@ class Event < ApplicationRecord
   has_many :attendances
   has_many :users, through: :attendances
 
+  def end_date
+    self.start_date + (self.duration * 60)
+  end
+
+
   private 
 
   def multiple_of_five
